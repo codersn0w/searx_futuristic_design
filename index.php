@@ -1,6 +1,6 @@
 <!--
 This software is released under the BSD-3-Clause License.
-See LICENSE file
+See LICENSE file.
 (C) 2018- by ThunderRa1n, <podsn0w@gmail.com>
 -->
 <!DOCTYPE html>
