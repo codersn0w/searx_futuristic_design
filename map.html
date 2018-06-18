@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Map - Ellpedia</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <!-- Load Leaflet from CDN-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.0.7"></script>
+
+  <!-- Load Esri Leaflet Geocoder from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.3/dist/esri-leaflet-geocoder.css">
+  <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.3"></script>
+  <script>
+  var webFrame = require('electron').webFrame;
+webFrame.setZoomLevelLimits(1, 1);
+</script>
+
+  <style>
+    body { margin:0; padding:0;}
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+
+<script>
+  
+  var map = L.map('map', {zoomControl: false}).setView([40.73, -73.981], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  var searchControl = L.esri.Geocoding.geosearch({expanded:true,
+    collapseAfterResult: false,
+    useMapBounds: false}).addTo(map);
+　L.control.zoom( {position: 'bottomright'} ).addTo(map);
+　L.control.scale( {position: 'bottomright'} ).addTo(map);
+  var results = L.layerGroup({zoomToResult: false}).addTo(map);
+  searchControl.on('results', function(data){
+    results.clearLayers();
+    for (var i = data.results.length - 1; i >= 0; i--) {
+      results.addLayer(L.marker(data.results[i].latlng));
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    My English isn't so good. Sorry ;-)
+  	<h1 style="color:#ff0000;">&lt;!WARNING!&gt;</h1>
+  	<h3>1. DONT SCRAPE PUBLIC SEARX INSTANCES WITH THIS PACKAGE.<br>
+  	    TRY THIS ON YOUR OWN SEARX INSTANCE.</h3>
+
+  	<h3>2. THIS PACKAGE IS RELEASED UNDER BSD-3-CLAUSE LICENSE.</h3>
+
+
+    <h1>&lt;How to set up&gt;</h1>
+
+    <h3>1. Set the URL of your Searx in include/websearch.php and include/newssearch.php.</h3>
+    <blockquote>
+      Line 16<br>
+      $url = 'http://<span style="color:#ff0000;">YOUR_SEARX_URL</span>/?q=' . $_GET['q'] . '& ...
+    </blockquote>
+
+    <h3>2. Set your API key of <a href="https://pixabay.com/api/docs/" target="_blank">Pixabay.com</a> in include/imagesearch.js.</h3>
+    <blockquote>
+      Line 2<br>
+      var URL = "https://pixabay.com/api/?key=<span style="color:#ff0000;">YOUR_PIXABAY_API_KEY</span>&lang=en ...
+    </blockquote>
+
+    <h3>3. Set your API key of <a href="https://developers.google.com/youtube/v3/getting-started?hl=en" target="_blank">Youtube</a> in include/videosearch.php.</h3>
+    <blockquote>
+      Line 5<br>
+      $DEVELOPER_KEY = '<span style="color:#ff0000;">YOUR API KEY</span>';
+    </blockquote>
+
+  	<h1>&lt;Change "href" on footer&gt;</h1>
+  	<h3>You can change links on footer.<br>
+  		Check out the following part of code in index.php or search.php.
+  	</h3>
+  	<blockquote>
+  		&lt;ul id="footerlist"&gt;<br>
+	    &nbsp;&nbsp;&lt;li&gt;&lt;a href="readme.html"&gtLanguage&lt/a&gt;&lt;/li&gt;<br>
+	    &nbsp;&nbsp;&lt;li&gt;&lt;a href="readme.html"&gtAbout&lt/a&gt;&lt;/li&gt;<br>
+	    &nbsp;&nbsp;&lt;li&gt;&lt;a href="readme.html"&gtBlog&lt/a&gt;&lt;/li&gt;<br>
+	    &nbsp;&nbsp;&lt;li&gt;&lt;a href="readme.html"&gtPrivacy&lt/a&gt;&lt;/li&gt;<br>
+	    &nbsp;&nbsp;&lt;li&gt;&lt;a href="readme.html"&gtTerms&lt/a&gt;&lt;/li&gt;<br>
+	  &lt;/ul&gt;
+  	</blockquote>
+  </body>
+</html>
