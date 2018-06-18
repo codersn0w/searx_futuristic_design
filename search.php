@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="Pragma" content="no-cache">
