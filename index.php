@@ -1,5 +1,10 @@
+<!--
+This software is released under the BSD-3-Clause License.
+See LICENSE file
+(C) 2018- by ThunderRa1n, <podsn0w@gmail.com>
+-->
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="en">
   <head>
     <meta cahrset="UTF-8">
     <meta http-equiv="Pragma" content="no-cache">
